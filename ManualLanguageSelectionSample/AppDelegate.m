@@ -8,15 +8,48 @@
 
 #import "AppDelegate.h"
 
+#import "ViewController.h"
+
+
 @interface AppDelegate ()
 
 @end
 
+
 @implementation AppDelegate
 
 
+#pragma mark - Language Public
+
+- (void)reDrawAllUIForLanguage:(NSString *)language {
+    [[ACLanguageUtil sharedInstance] setLanguage:language];
+    
+    self.window.rootViewController = nil;
+    
+    [self setRootVC];
+}
+
+
+#pragma mark - Private
+
+- (void)setRootVC {
+    ViewController *viewController = [[ViewController alloc] initWithNibName:nil bundle:nil];
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
+}
+
+
+#pragma mark - Application
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    [self setRootVC];
+
+    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

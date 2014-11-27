@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  ManualLanguageSelectionSample
+
+  Created by Albert Chu on 14/11/27.
+  Copyright (c) 2014年 Albert Chu. All rights reserved.
+*/
+
+
+"Sample"        = "範例";
+
+"Language"      = "語言";
+
+"Settings"      = "設定";

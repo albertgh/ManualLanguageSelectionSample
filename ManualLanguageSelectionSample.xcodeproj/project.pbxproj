@@ -10,21 +10,14 @@
 		764007B21A2713AC00D10B9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 764007B11A2713AC00D10B9D /* main.m */; };
 		764007B51A2713AC00D10B9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 764007B41A2713AC00D10B9D /* AppDelegate.m */; };
 		764007B81A2713AC00D10B9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764007B71A2713AC00D10B9D /* ViewController.m */; };
-		764007BB1A2713AC00D10B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 764007B91A2713AC00D10B9D /* Main.storyboard */; };
 		764007BD1A2713AC00D10B9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 764007BC1A2713AC00D10B9D /* Images.xcassets */; };
 		764007C01A2713AC00D10B9D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764007BE1A2713AC00D10B9D /* LaunchScreen.xib */; };
-		764007CC1A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 764007CB1A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.m */; };
+		764007D71A2715A300D10B9D /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 764007D61A2715A300D10B9D /* SettingsViewController.m */; };
+		764007DD1A27199000D10B9D /* ACLanguageUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 764007DC1A27199000D10B9D /* ACLanguageUtil.m */; };
+		764007E91A271C2500D10B9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 764007EB1A271C2500D10B9D /* Localizable.strings */; };
+		764007EC1A271C3A00D10B9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 764007EE1A271C3A00D10B9D /* InfoPlist.strings */; };
+		7680341A1A27231500C9D236 /* 3rdLib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 768034191A27231500C9D236 /* 3rdLib.bundle */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		764007C61A2713AC00D10B9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 764007A41A2713AC00D10B9D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 764007AB1A2713AC00D10B9D;
-			remoteInfo = ManualLanguageSelectionSample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		764007AC1A2713AC00D10B9D /* ManualLanguageSelectionSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManualLanguageSelectionSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,23 +27,26 @@
 		764007B41A2713AC00D10B9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		764007B61A2713AC00D10B9D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		764007B71A2713AC00D10B9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		764007BA1A2713AC00D10B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		764007BC1A2713AC00D10B9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		764007BF1A2713AC00D10B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		764007C51A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManualLanguageSelectionSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		764007CA1A2713AC00D10B9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		764007CB1A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManualLanguageSelectionSampleTests.m; sourceTree = "<group>"; };
+		764007D51A2715A300D10B9D /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		764007D61A2715A300D10B9D /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		764007D81A27176C00D10B9D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		764007DB1A27199000D10B9D /* ACLanguageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACLanguageUtil.h; sourceTree = "<group>"; };
+		764007DC1A27199000D10B9D /* ACLanguageUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACLanguageUtil.m; sourceTree = "<group>"; };
+		764007F01A271C4000D10B9D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		764007F11A271C4100D10B9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		764007F31A271C4E00D10B9D /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		764007F41A271C4E00D10B9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		764007F51A271C5700D10B9D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		768034151A271CDE00C9D236 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		768034161A271CDE00C9D236 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		768034171A271D1B00C9D236 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		768034181A271D1C00C9D236 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
+		768034191A27231500C9D236 /* 3rdLib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 3rdLib.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		764007A91A2713AC00D10B9D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		764007C21A2713AC00D10B9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -64,7 +60,6 @@
 			isa = PBXGroup;
 			children = (
 				764007AE1A2713AC00D10B9D /* ManualLanguageSelectionSample */,
-				764007C81A2713AC00D10B9D /* ManualLanguageSelectionSampleTests */,
 				764007AD1A2713AC00D10B9D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				764007AC1A2713AC00D10B9D /* ManualLanguageSelectionSample.app */,
-				764007C51A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,11 +75,14 @@
 		764007AE1A2713AC00D10B9D /* ManualLanguageSelectionSample */ = {
 			isa = PBXGroup;
 			children = (
+				764007DA1A27197400D10B9D /* ACLanguageUtil */,
 				764007B31A2713AC00D10B9D /* AppDelegate.h */,
 				764007B41A2713AC00D10B9D /* AppDelegate.m */,
 				764007B61A2713AC00D10B9D /* ViewController.h */,
 				764007B71A2713AC00D10B9D /* ViewController.m */,
-				764007B91A2713AC00D10B9D /* Main.storyboard */,
+				764007D51A2715A300D10B9D /* SettingsViewController.h */,
+				764007D61A2715A300D10B9D /* SettingsViewController.m */,
+				768034191A27231500C9D236 /* 3rdLib.bundle */,
 				764007BC1A2713AC00D10B9D /* Images.xcassets */,
 				764007BE1A2713AC00D10B9D /* LaunchScreen.xib */,
 				764007AF1A2713AC00D10B9D /* Supporting Files */,
@@ -96,27 +93,22 @@
 		764007AF1A2713AC00D10B9D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				764007B01A2713AC00D10B9D /* Info.plist */,
 				764007B11A2713AC00D10B9D /* main.m */,
+				764007D81A27176C00D10B9D /* PrefixHeader.pch */,
+				764007B01A2713AC00D10B9D /* Info.plist */,
+				764007EE1A271C3A00D10B9D /* InfoPlist.strings */,
+				764007EB1A271C2500D10B9D /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		764007C81A2713AC00D10B9D /* ManualLanguageSelectionSampleTests */ = {
+		764007DA1A27197400D10B9D /* ACLanguageUtil */ = {
 			isa = PBXGroup;
 			children = (
-				764007CB1A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.m */,
-				764007C91A2713AC00D10B9D /* Supporting Files */,
+				764007DB1A27199000D10B9D /* ACLanguageUtil.h */,
+				764007DC1A27199000D10B9D /* ACLanguageUtil.m */,
 			);
-			path = ManualLanguageSelectionSampleTests;
-			sourceTree = "<group>";
-		};
-		764007C91A2713AC00D10B9D /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				764007CA1A2713AC00D10B9D /* Info.plist */,
-			);
-			name = "Supporting Files";
+			path = ACLanguageUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,24 +131,6 @@
 			productReference = 764007AC1A2713AC00D10B9D /* ManualLanguageSelectionSample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		764007C41A2713AC00D10B9D /* ManualLanguageSelectionSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 764007D21A2713AC00D10B9D /* Build configuration list for PBXNativeTarget "ManualLanguageSelectionSampleTests" */;
-			buildPhases = (
-				764007C11A2713AC00D10B9D /* Sources */,
-				764007C21A2713AC00D10B9D /* Frameworks */,
-				764007C31A2713AC00D10B9D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				764007C71A2713AC00D10B9D /* PBXTargetDependency */,
-			);
-			name = ManualLanguageSelectionSampleTests;
-			productName = ManualLanguageSelectionSampleTests;
-			productReference = 764007C51A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -169,10 +143,6 @@
 					764007AB1A2713AC00D10B9D = {
 						CreatedOnToolsVersion = 6.1;
 					};
-					764007C41A2713AC00D10B9D = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 764007AB1A2713AC00D10B9D;
-					};
 				};
 			};
 			buildConfigurationList = 764007A71A2713AC00D10B9D /* Build configuration list for PBXProject "ManualLanguageSelectionSample" */;
@@ -180,8 +150,10 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				"zh-Hant",
+				"zh-Hans",
+				en,
 			);
 			mainGroup = 764007A31A2713AC00D10B9D;
 			productRefGroup = 764007AD1A2713AC00D10B9D /* Products */;
@@ -189,7 +161,6 @@
 			projectRoot = "";
 			targets = (
 				764007AB1A2713AC00D10B9D /* ManualLanguageSelectionSample */,
-				764007C41A2713AC00D10B9D /* ManualLanguageSelectionSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -199,16 +170,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				764007BB1A2713AC00D10B9D /* Main.storyboard in Resources */,
 				764007C01A2713AC00D10B9D /* LaunchScreen.xib in Resources */,
+				764007EC1A271C3A00D10B9D /* InfoPlist.strings in Resources */,
+				764007E91A271C2500D10B9D /* Localizable.strings in Resources */,
 				764007BD1A2713AC00D10B9D /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		764007C31A2713AC00D10B9D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				7680341A1A27231500C9D236 /* 3rdLib.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,42 +188,42 @@
 				764007B81A2713AC00D10B9D /* ViewController.m in Sources */,
 				764007B51A2713AC00D10B9D /* AppDelegate.m in Sources */,
 				764007B21A2713AC00D10B9D /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		764007C11A2713AC00D10B9D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				764007CC1A2713AC00D10B9D /* ManualLanguageSelectionSampleTests.m in Sources */,
+				764007D71A2715A300D10B9D /* SettingsViewController.m in Sources */,
+				764007DD1A27199000D10B9D /* ACLanguageUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		764007C71A2713AC00D10B9D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 764007AB1A2713AC00D10B9D /* ManualLanguageSelectionSample */;
-			targetProxy = 764007C61A2713AC00D10B9D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin PBXVariantGroup section */
-		764007B91A2713AC00D10B9D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				764007BA1A2713AC00D10B9D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		764007BE1A2713AC00D10B9D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				764007BF1A2713AC00D10B9D /* Base */,
+				764007F51A271C5700D10B9D /* zh-Hans */,
+				768034171A271D1B00C9D236 /* en */,
+				768034181A271D1C00C9D236 /* zh-Hant */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		764007EB1A271C2500D10B9D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				764007F01A271C4000D10B9D /* zh-Hant */,
+				764007F11A271C4100D10B9D /* zh-Hans */,
+				768034161A271CDE00C9D236 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		764007EE1A271C3A00D10B9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				764007F31A271C4E00D10B9D /* zh-Hant */,
+				764007F41A271C4E00D10B9D /* zh-Hans */,
+				768034151A271CDE00C9D236 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,7 +263,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -332,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -343,7 +309,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = ManualLanguageSelectionSample/PrefixHeader.pch;
 				INFOPLIST_FILE = ManualLanguageSelectionSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -353,43 +322,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = ManualLanguageSelectionSample/PrefixHeader.pch;
 				INFOPLIST_FILE = ManualLanguageSelectionSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		764007D31A2713AC00D10B9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ManualLanguageSelectionSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManualLanguageSelectionSample.app/ManualLanguageSelectionSample";
-			};
-			name = Debug;
-		};
-		764007D41A2713AC00D10B9D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = ManualLanguageSelectionSampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ManualLanguageSelectionSample.app/ManualLanguageSelectionSample";
 			};
 			name = Release;
 		};
@@ -412,14 +350,7 @@
 				764007D11A2713AC00D10B9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		764007D21A2713AC00D10B9D /* Build configuration list for PBXNativeTarget "ManualLanguageSelectionSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				764007D31A2713AC00D10B9D /* Debug */,
-				764007D41A2713AC00D10B9D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
