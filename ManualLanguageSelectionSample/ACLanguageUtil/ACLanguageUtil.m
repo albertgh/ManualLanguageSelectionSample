@@ -6,6 +6,12 @@
 
 #import "ACLanguageUtil.h"
 
+
+static NSString * const ACLanguageUtilDefaultLanguage   = @"en";
+
+static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
+
+
 @implementation ACLanguageUtil
 
 #pragma mark - Singleton
@@ -22,9 +28,11 @@
 #pragma mark - Public
 
 - (void)setLanguage:(NSString *)language {
-    self.currentLanguage = language;
-    [[NSUserDefaults standardUserDefaults] setObject:language forKey:ACLanguageUtilLanguageIdentifier];
-    [[NSUserDefaults standardUserDefaults] synchronize];
+    if ([self doSupportTheNewLanguage:language]) {
+        self.currentLanguage = language;
+        [[NSUserDefaults standardUserDefaults] setObject:language forKey:ACLanguageUtilLanguageIdentifier];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 - (NSBundle *)manualLanguagebundle:(NSBundle *)bundle {
@@ -58,28 +66,31 @@
         else {
             // first init
             NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-            NSArray* languages = [defaults objectForKey:@"AppleLanguages"];
-            NSString* currentLanguage = languages[0];
-            
-            BOOL isSupport = NO;
-            NSArray *supportLanguagesArray = @[@"zh-Hans", @"zh-Hant", @"en"];
-            for (NSString *languageCodeString in supportLanguagesArray) {
-                if ([currentLanguage isEqualToString:languageCodeString]) {
-                    isSupport = YES;
-                    break;
-                }
-            }
+            NSArray *languages = [defaults objectForKey:@"AppleLanguages"];
+            NSString *currentLanguage = languages[0];
             
             // use english default
-            NSString *setToLanguageCodeString = @"en";
-            if (isSupport) {
-                setToLanguageCodeString = currentLanguage;
+            NSString *newLanguage = ACLanguageUtilDefaultLanguage;
+            if ([self doSupportTheNewLanguage:currentLanguage]) {
+                newLanguage = currentLanguage;
             }
             
-            [self setLanguage:setToLanguageCodeString];
+            [self setLanguage:newLanguage];
         }
     }
     return self;
+}
+
+#pragma mark - Private
+
+- (BOOL)doSupportTheNewLanguage:(NSString *)newLanguage {
+    NSArray *supportLanguagesArray = [ACLanguageUtilSupportLanguages componentsSeparatedByString:@","];
+    for (NSString *language in supportLanguagesArray) {
+        if ([newLanguage isEqualToString:language]) {
+            return YES;
+        }
+    }
+    return NO;
 }
 
 @end
