@@ -64,9 +64,7 @@
                                       @"",
                                       nil);
     
-    
     [self.view addSubview:label];
-    
 }
 
 - (void)didReceiveMemoryWarning {

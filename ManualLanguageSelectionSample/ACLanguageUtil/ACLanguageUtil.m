@@ -9,7 +9,7 @@
 
 static NSString * const ACLanguageUtilDefaultLanguage   = @"en";
 
-static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
+static NSString * const ACLanguageUtilSupportLanguages  = @"en, zh-Hans, zh-Hant";
 
 
 @implementation ACLanguageUtil
@@ -38,14 +38,14 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
 #pragma mark - For Macros
 
 - (NSString *)localizedStringForKey:(NSString *)key {
-    return  [[self manualLanguagebundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:nil];
+    return  [[self manualLanguageBundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:nil];
 }
 
 - (NSString *)localizedStringForKey:(NSString *)key fromTable:(NSString *)table {
-    return  [[self manualLanguagebundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:table];
+    return  [[self manualLanguageBundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:table];
 }
 
-- (NSBundle *)manualLanguagebundle:(NSBundle *)bundle {
+- (NSBundle *)manualLanguageBundle:(NSBundle *)bundle {
     NSBundle *newBundle = bundle;
     
     NSString *currentLanguageString = [[NSUserDefaults standardUserDefaults] objectForKey:ACLanguageUtilLanguageIdentifier];
@@ -65,7 +65,8 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
 - (id)init {
     self = [super init];
     if (self) {
-        NSString *currentLanguageString = [[NSUserDefaults standardUserDefaults] objectForKey:ACLanguageUtilLanguageIdentifier];
+        NSString *currentLanguageString =
+        [[NSUserDefaults standardUserDefaults] objectForKey:ACLanguageUtilLanguageIdentifier];
         if (currentLanguageString.length > 0) {
             self.currentLanguage = currentLanguageString;
         }
@@ -76,7 +77,8 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
             NSString *currentLanguage = languages[0];
             
             // use english default
-            NSString *newLanguage = [ACLanguageUtilDefaultLanguage stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+            NSString *newLanguage =
+            [ACLanguageUtilDefaultLanguage stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             if ([self doSupportTheNewLanguage:currentLanguage]) {
                 newLanguage = currentLanguage;
             }

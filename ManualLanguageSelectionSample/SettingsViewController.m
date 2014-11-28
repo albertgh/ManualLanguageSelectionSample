@@ -46,7 +46,6 @@
     self.title = NSLocalizedString(@"Settings", nil);
 
     [self createTableView];
-
 }
 
 - (void)createTableView {
@@ -86,7 +85,6 @@
     if ( nil == cell ) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:DoNotReuseIdentifier];
     }
-    
     
     // config cell
     NSString *languageString = @"";
@@ -129,13 +127,11 @@
 
 #pragma mark - UITableViewDelegate
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 44.f;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 44.0f;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     self.navigationItem.rightBarButtonItem =
