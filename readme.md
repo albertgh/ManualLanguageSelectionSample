@@ -2,7 +2,7 @@
 
 Manual Language Selection Sample
  
-By redefining `NSLocalizedString` and `NSLocalizedStringWithDefaultValue`,
+By redefining all four `NSLocalizedString` `NSLocalizedStringFromTable` `NSLocalizedStringFromTableInBundle` `NSLocalizedStringWithDefaultValue` macros,
  
 so that you can make your project able to select language manually 
  
