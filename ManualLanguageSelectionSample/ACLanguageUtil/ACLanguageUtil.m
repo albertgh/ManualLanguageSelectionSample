@@ -70,7 +70,7 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
             NSString *currentLanguage = languages[0];
             
             // use english default
-            NSString *newLanguage = ACLanguageUtilDefaultLanguage;
+            NSString *newLanguage = [ACLanguageUtilDefaultLanguage stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
             if ([self doSupportTheNewLanguage:currentLanguage]) {
                 newLanguage = currentLanguage;
             }
@@ -86,7 +86,8 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
 - (BOOL)doSupportTheNewLanguage:(NSString *)newLanguage {
     NSArray *supportLanguagesArray = [ACLanguageUtilSupportLanguages componentsSeparatedByString:@","];
     for (NSString *language in supportLanguagesArray) {
-        if ([newLanguage isEqualToString:language]) {
+        NSString *cleanLanguage = [language stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        if ([newLanguage isEqualToString:cleanLanguage]) {
             return YES;
         }
     }
