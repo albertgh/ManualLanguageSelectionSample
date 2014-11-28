@@ -12,7 +12,7 @@ without change any other code even 3rd party code.
 ## Installing
 
 ```
-Drag `ACLanguageUtil` folder into your project. 
+Drag *ACLanguageUtil* folder into your project. 
 ```
 
 ```objective-c

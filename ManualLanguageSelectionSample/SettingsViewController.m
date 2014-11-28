@@ -139,7 +139,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     self.navigationItem.rightBarButtonItem =
-    [[UIBarButtonItem alloc] initWithTitle:@"Done"
+    [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", nil)
                                      style:UIBarButtonItemStylePlain
                                     target:self
                                     action:@selector(switchButtonTapped:)];
