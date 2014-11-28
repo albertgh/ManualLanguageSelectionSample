@@ -9,11 +9,19 @@
 
 #undef NSLocalizedString
 #define NSLocalizedString(key, comment) \
-[[ACLanguageUtil sharedInstance] localizedStringForKey:key]
+[[ACLanguageUtil sharedInstance] localizedStringForKey:(key)]
+
+#undef NSLocalizedStringFromTable
+#define NSLocalizedStringFromTable(key, tbl, comment) \
+[[ACLanguageUtil sharedInstance] localizedStringForKey:(key) fromTable:(tbl)]
+
+#undef NSLocalizedStringFromTableInBundle
+#define NSLocalizedStringFromTableInBundle(key, tbl, bundle, comment) \
+[[[ACLanguageUtil sharedInstance] manualLanguagebundle:(bundle)] localizedStringForKey:(key) value:@"" table:(tbl)]
 
 #undef NSLocalizedStringWithDefaultValue
 #define NSLocalizedStringWithDefaultValue(key, tbl, bundle, val, comment) \
-[[[ACLanguageUtil sharedInstance] manualLanguagebundle:bundle] localizedStringForKey:(key) value:(val) table:(tbl)]
+[[[ACLanguageUtil sharedInstance] manualLanguagebundle:(bundle)] localizedStringForKey:(key) value:(val) table:(tbl)]
 
 
 static NSString * const ACLanguageUtilLanguageIdentifier = @"ACLanguageUtilLanguageIdentifier";
@@ -26,8 +34,11 @@ static NSString * const ACLanguageUtilLanguageIdentifier = @"ACLanguageUtilLangu
 
 - (void)setLanguage:(NSString *)language;
 
-- (NSBundle *)manualLanguagebundle:(NSBundle *)bundle;
+
+#pragma mark - For Macros
 
 - (NSString *)localizedStringForKey:(NSString *)key;
+- (NSString *)localizedStringForKey:(NSString *)key fromTable:(NSString *)table;
+- (NSBundle *)manualLanguagebundle:(NSBundle *)bundle;
 
 @end

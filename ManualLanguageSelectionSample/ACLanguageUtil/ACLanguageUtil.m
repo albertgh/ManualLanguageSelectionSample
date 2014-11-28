@@ -35,6 +35,16 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
     }
 }
 
+#pragma mark - For Macros
+
+- (NSString *)localizedStringForKey:(NSString *)key {
+    return  [[self manualLanguagebundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:nil];
+}
+
+- (NSString *)localizedStringForKey:(NSString *)key fromTable:(NSString *)table {
+    return  [[self manualLanguagebundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:table];
+}
+
 - (NSBundle *)manualLanguagebundle:(NSBundle *)bundle {
     NSBundle *newBundle = bundle;
     
@@ -48,10 +58,6 @@ static NSString * const ACLanguageUtilSupportLanguages  = @"en,zh-Hans,zh-Hant";
     }
     
     return newBundle;
-}
-
-- (NSString *)localizedStringForKey:(NSString *)key {
-    return  [[self manualLanguagebundle:[NSBundle mainBundle]] localizedStringForKey:(key) value:@"" table:nil];
 }
 
 #pragma mark - Init

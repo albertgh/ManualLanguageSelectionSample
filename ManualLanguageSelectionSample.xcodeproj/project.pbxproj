@@ -17,6 +17,7 @@
 		764007E91A271C2500D10B9D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 764007EB1A271C2500D10B9D /* Localizable.strings */; };
 		764007EC1A271C3A00D10B9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 764007EE1A271C3A00D10B9D /* InfoPlist.strings */; };
 		7680341A1A27231500C9D236 /* 3rdLib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 768034191A27231500C9D236 /* 3rdLib.bundle */; };
+		76D94D121A2841E00014EA2B /* FromTable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76D94D0E1A2841E00014EA2B /* FromTable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,9 @@
 		768034171A271D1B00C9D236 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		768034181A271D1C00C9D236 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
 		768034191A27231500C9D236 /* 3rdLib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = 3rdLib.bundle; sourceTree = "<group>"; };
+		76D94D0F1A2841E00014EA2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/FromTable.strings; sourceTree = "<group>"; };
+		76D94D101A2841E00014EA2B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/FromTable.strings"; sourceTree = "<group>"; };
+		76D94D111A2841E00014EA2B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/FromTable.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 				764007B71A2713AC00D10B9D /* ViewController.m */,
 				764007D51A2715A300D10B9D /* SettingsViewController.h */,
 				764007D61A2715A300D10B9D /* SettingsViewController.m */,
+				76D94D0D1A2841E00014EA2B /* 3rdLib_Assets */,
 				768034191A27231500C9D236 /* 3rdLib.bundle */,
 				764007BC1A2713AC00D10B9D /* Images.xcassets */,
 				764007BE1A2713AC00D10B9D /* LaunchScreen.xib */,
@@ -109,6 +114,14 @@
 				764007DC1A27199000D10B9D /* ACLanguageUtil.m */,
 			);
 			path = ACLanguageUtil;
+			sourceTree = "<group>";
+		};
+		76D94D0D1A2841E00014EA2B /* 3rdLib_Assets */ = {
+			isa = PBXGroup;
+			children = (
+				76D94D0E1A2841E00014EA2B /* FromTable.strings */,
+			);
+			path = 3rdLib_Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +188,7 @@
 				764007E91A271C2500D10B9D /* Localizable.strings in Resources */,
 				764007BD1A2713AC00D10B9D /* Images.xcassets in Resources */,
 				7680341A1A27231500C9D236 /* 3rdLib.bundle in Resources */,
+				76D94D121A2841E00014EA2B /* FromTable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +238,16 @@
 				768034151A271CDE00C9D236 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		76D94D0E1A2841E00014EA2B /* FromTable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76D94D0F1A2841E00014EA2B /* en */,
+				76D94D101A2841E00014EA2B /* zh-Hans */,
+				76D94D111A2841E00014EA2B /* zh-Hant */,
+			);
+			name = FromTable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

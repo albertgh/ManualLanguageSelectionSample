@@ -33,11 +33,16 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    self.title = NSLocalizedString(@"Sample", nil);
+    self.title = NSLocalizedStringFromTable(@"Sample", @"FromTable", nil);
     
+    NSString *rightBarButtomTitle =
+    NSLocalizedStringFromTableInBundle(@"Language",
+                                       @"FromTable",
+                                       [NSBundle mainBundle],
+                                       nil);
     
     self.navigationItem.rightBarButtonItem =
-    [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Language", nil)
+    [[UIBarButtonItem alloc] initWithTitle:rightBarButtomTitle
                                      style:UIBarButtonItemStylePlain
                                     target:self
                                     action:@selector(languageButtonTapped:)];
@@ -52,7 +57,12 @@
     label.font = [UIFont boldSystemFontOfSize:40.0f];
     label.textAlignment = NSTextAlignmentCenter;
     label.numberOfLines = 2;
-    label.text = NSLocalizedStringWithDefaultValue(@"a2a_d2d", nil, [self some3rdBundle], @"", @"");
+    label.text =
+    NSLocalizedStringWithDefaultValue(@"a2a_d2d",
+                                      nil,
+                                      [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"3rdLib" ofType:@"bundle"]],
+                                      @"",
+                                      nil);
     
     
     [self.view addSubview:label];
@@ -64,11 +74,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma Some3rdBundle
-
-- (NSBundle*)some3rdBundle {
-    return [NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:@"3rdLib" ofType:@"bundle"]];
-}
 
 
 @end
